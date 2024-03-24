@@ -1,0 +1,24 @@
+.button-container {
+    position: fixed;
+    bottom: 400px; /* Ajustez cette valeur selon votre besoin */
+    right: 60px;
+    z-index: 2; /* Assure que les boutons sont au-dessus de tout le reste */
+}
+
+.button-container button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    background-color: #27ae60; /* Couleur verte par défaut */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Espacement entre les boutons */
+}
+
+.button-container button:hover {
+    background-color: #e74c3c; /* Nouvelle couleur rouge au survol */
+}
