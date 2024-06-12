@@ -1,5 +1,8 @@
 # Dice Game
 
+![Dice Icon](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/dice-d20.svg)
+
+
 ## Table of Contents
 
 1. [Overview](#overview)
@@ -15,13 +18,13 @@ This is a web application for a game of dice. The backend is developed using Jav
 - **Access to Leaderboard:** Users can view lists of users who achieved high scores.
 - **View Personal Scores:** Users can access their own high scores.
 ## Technologies Used
-- **Java Enterprise Edition (JEE):** 
-- **Servlets:** 
-- **JavaServer Pages (JSP):** 
-- **HTML:** 
-- **CSS:** 
-- **JavaScript:** 
-- **Apache Tomcat (v10.0):**
+- **Java Enterprise Edition (JEE)** 
+- **Servlets** 
+- **JavaServer Pages (JSP)** 
+- **HTML** 
+- **CSS** 
+- **JavaScript** 
+- **Apache Tomcat (v10.0)**
   
 ## Installation
 
