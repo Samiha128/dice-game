@@ -1,6 +1,6 @@
 # Dice Game
 
-![Dice Icon](https://www.flaticon.com/svg/vstatic/svg/2465/246569.svg?token=exp=1623592850~hmac=3a0d150fa5f6b3fa26a55f01e9fcbcf2)
+![Dice Icon](https://cdn-icons-png.flaticon.com/128/246/246569.png)
 
 
 
