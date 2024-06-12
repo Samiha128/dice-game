@@ -85,6 +85,8 @@ private static final long serialVersionUID = 1L;
 
 		        // On stocke l'utilisateur authentifié dans la session
 		        request.getSession().setAttribute("user", user);
+		        gameContext.insertUser(user);
+		        
 
 		        // On envoie une vue qu'est la page home comme résultat
 		        getServletContext().getRequestDispatcher("/Web_inf/vues/back/home.jsp").forward(request, response);

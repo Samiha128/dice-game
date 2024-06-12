@@ -6,7 +6,12 @@
   <packaging>war</packaging>
   <name>id</name>
   
-  <dependencies>
+ <properties>
+		<java-version>11</java-version>
+	</properties>
+
+
+	<dependencies>
 
 
 
@@ -78,21 +83,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build> 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+	</build>
 </project>

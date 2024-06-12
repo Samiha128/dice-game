@@ -1,4 +1,6 @@
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.Set" %>
+<%@ page import="java.util.HashSet" %>
 <%@ page import="bo.User" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -23,20 +25,44 @@
     <svg class="ico-cup">
       <use xlink:href="#cup"></use>
     </svg>
-    Current User Score
+    Most active Players
   </h1>
   <ol>
-   <div>
-    <% 
-        User user = (User) session.getAttribute("user");
-        if (user != null) {
-    %>
-        <p><%= user.getPrenom() %>!</p>
-        <!-- Afficher le score de l'utilisateur actuellement connecté -->
-        <p>Score: <%= user.getScore() %></p>
-    <% } %>
-</div>
-   
+
+<%
+    List<User> users = (List<User>) application.getAttribute("users");
+    if (users != null && !users.isEmpty()) {
+        // Trier la liste des utilisateurs par score (du plus élevé au plus bas)
+        users.sort((u1, u2) -> Double.compare(u2.getScore(), u1.getScore()));
+
+        // Utiliser un ensemble pour stocker les identifiants uniques des utilisateurs déjà affichés
+        Set<String> displayedUserIdentifiers = new HashSet<>();
+
+        // Afficher les 4 premiers utilisateurs avec les scores les plus élevés
+        for (int i = 0; i < Math.min(4, users.size()); i++) {
+            User user = users.get(i);
+            // Construire l'identifiant unique de l'utilisateur
+            String userIdentifier = user.getemail() + user.getPrenom() + user.getPassword();
+            // Vérifier si cet utilisateur a déjà été affiché (même identifiant)
+            if (!displayedUserIdentifiers.contains(userIdentifier)) {
+                // Ajouter l'identifiant de l'utilisateur à l'ensemble des utilisateurs affichés
+                displayedUserIdentifiers.add(userIdentifier);
+%>
+    <li>
+        <mark><%= user.getPrenom() %></mark> <!-- Récupérer le prénom de l'utilisateur -->
+        <small><%= user.getScore() %></small> <!-- Récupérer le score de l'utilisateur -->
+    </li>
+<%
+            }
+        }
+    }
+%>
+
+
+
+
+ 
+  
   </ol>
 </div>
 

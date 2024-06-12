@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import bo.User;
-import helpers.StockageManagement;
+import helpers.contextemanagement;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -12,14 +12,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/back/score")
+@WebServlet("/BestScore")
 public class BestScore extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 
-		StockageManagement contextGame = StockageManagement.getInstance(getServletContext());
+		contextemanagement contextGame = contextemanagement.getInstance(getServletContext());
 
 		// On récupére tous les utilisateurs
 		List<User> users = contextGame.getAllUsers();
@@ -31,7 +31,7 @@ public class BestScore extends HttpServlet {
 
 		// On redirige vers la vue (redirection coté serveur)
 		//pour sécuriser les vues des accès directes nous avons choisi de les mettres dans /WEB-INF
-		getServletContext().getRequestDispatcher("/WEB-INF/vues/back/score.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/Web_inf/vues/back/bestscore.jsp").forward(request, response);
 
 	}
 	

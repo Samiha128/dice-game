@@ -137,7 +137,7 @@ section {
         <p>We can't seem to find the page you're looking for. Please check the URL for any typos.</p>
         
         <ul class="menu">
-          <li><a href="http://localhost:8080/Game1_JavaEE/Web_inf/vues/back/login.jsp">Go to Homepage</a></li>
+          <li><a href="${pageContext.request.contextPath}/Web_inf/vues/back/login.jsp">Go to Homepage</a></li>
           
           
           <li><a href="mailto:samiha.elmansouri@etu.uae.ac.ma">Contact support</a></li>

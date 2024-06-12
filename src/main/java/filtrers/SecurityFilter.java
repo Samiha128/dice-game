@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
 
 import filtrers.SecurityFilter;
 public class SecurityFilter {
-	private static final String CONNEXION_PAGE = "/WEB-inf/vues/back/login.jsp";
+	private static final String CONNEXION_PAGE = "/Web_inf/vues/back/login.jsp";
 
 	private final Logger LOGGER;
 

@@ -5,13 +5,15 @@
     z-index: 2; /* Assure que les boutons sont au-dessus de tout le reste */
 }
 
+
+
 .button-container button {
     width: 100px;
     height: 100px;
     border: none;
     border-radius: 50%;
-    background-color: #27ae60; /* Couleur verte par défaut */
-    color: white;
+    background-color: white; /* Changement de couleur en blanc */
+    color: black; /* Changement de couleur de l'écriture en noir */
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -20,5 +22,6 @@
 }
 
 .button-container button:hover {
-    background-color: #e74c3c; /* Nouvelle couleur rouge au survol */
+    background-color: #e74c3c; /* Couleur rouge au survol */
+    color: white; /* Changement de couleur de l'écriture en blanc au survol */
 }

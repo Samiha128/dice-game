@@ -8,17 +8,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--Fontawesome-->
 	
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/desconnect.css">
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/dice.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/Game.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/score.css">
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/desconnect.css">
 	
 	<title>Dice</title>
 </head>
 <body>
 	 <style>
-	    * {
+	  * {
 	border: 0;
 	box-sizing: border-box;
 	margin: 0;
@@ -50,12 +51,17 @@ body {
 	display: grid;
 	place-items: center;
 }
-.t {
-    position: fixed; /* positionnement fixe */
-    right: 60px; /* distance de 20px du bord droit de la fenêtre */
-    bottom: 250px; /* distance de 40px du bas de la fenêtre */
-    z-index: 2; /* assure que l'élément est au-dessus d'autres éléments */
+#powerButton{
+    position: fixed; /* Positionnement fixe */
+    right: 60px; /* Distance de 60px du bord droit de la fenêtre */
+    bottom: 250px; /* Distance de 250px du bas de la fenêtre */
+    z-index: 2; /* Z-index pour être au-dessus d'autres éléments */
+    width: 1.5em; /* Largeur */
+    height: 1.5em; /* Hauteur */
+    
+	
 }
+
 .t__checkbox,
 .t__sr,
 .t__svg {
@@ -164,9 +170,10 @@ body {
 	stroke-dashoffset: -3;
 	transition-delay: 0s, 0.25s;
 }
-
+	 
+	  
         body {
-            background-image: url('https://cdn.arstechnica.net/wp-content/uploads/2016/08/GenCon19.jpg');
+            background-image: url('https://i.pinimg.com/originals/bc/99/63/bc9963fdfbf5fd0c57b742c6435215f5.gif');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -213,10 +220,76 @@ body {
 	</div>
 	<!-- Buttons -->
 	<!-- Buttons -->
+	<style>
+	.button-container {
+    position: fixed;
+    bottom: 400px; /* Ajustez cette valeur selon votre besoin */
+    right: 60px;
+    z-index: 2; /* Assure que les boutons sont au-dessus de tout le reste */
+}
+
+
+
+.button-container button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50%;
+    background-color: white; /* Changement de couleur en blanc */
+    color: black; /* Changement de couleur de l'écriture en noir */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Espacement entre les boutons */
+}
+
+.button-container button:hover {
+    background-color: #e74c3c; /* Couleur rouge au survol */
+    color: white; /* Changement de couleur de l'écriture en blanc au survol */
+}
+	
+	</style>
+	
 	<div class="button-container">
-    <button class="score-button">Score</button>
-    <button class="best-score-button">Best Score</button>
+    <button class="score-button" onclick="redirectToScoreServlet()"> Best Score</button>
+
+<script>
+function redirectToScoreServlet() {
+    // Redirection vers la servlet /score
+    window.location.href = "${pageContext.request.contextPath}/BestScore";
+}
+
+</script>
+    
+   <button class="best-score-button" onclick="redirectToScorePage()">Score</button>
+
+<script>
+    function redirectToScorePage() {
+        // Redirection vers la page "score.jsp"
+        window.location.href = "${pageContext.request.contextPath}/Web_inf/vues/back/score.jsp";
+    }
+</script>
+   
 </div>
+
+<label class="t" id="powerButton">
+	<input class="t__checkbox" type="checkbox" value="on">
+	<svg class="t__svg" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<ellipse class="t__svg-dot" cx="6" cy="6" rx="2" ry="1" fill="#fff" transform="rotate(-45,6,6)" />
+		<circle class="t__svg-ring" cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="0 5 27.7 5" stroke-dashoffset="0.01" transform="rotate(-90,12,12)"/>
+		<line class="t__svg-line" x1="12" y1="6" x2="12" y2="15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="9 9" stroke-dashoffset="3"/>
+		<line class="t__svg-line" x1="12" y1="6" x2="12" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6" stroke-dashoffset="6"/>
+	</svg>
+	<span class="t__sr">Power</span>
+</label>
+
+	<script>
+document.getElementById("powerButton").addEventListener("click", function() {
+    // Redirection vers la servlet Deconnect
+    window.location.href = "${pageContext.request.contextPath}/Deconnect";
+});
+</script>
 	
 	
 	
@@ -227,7 +300,7 @@ body {
 	
 	
 	
-		<a href="chemin_vers_votre_page_jsp" class="t" id="gameButton">
+		<label class="t" id="gameButton"  onclick="redirectToJSP()">
    <svg id="play"  viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
     
     <g fill="none">
@@ -240,23 +313,14 @@ body {
 </svg>
     <span class="t__sr">game</span>
 </label>
-		
-	    <label class="t" id="powerButton">
-	<input class="t__checkbox" type="checkbox" value="on">
-	<svg class="t__svg" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-		<ellipse class="t__svg-dot" cx="6" cy="6" rx="2" ry="1" fill="#fff" transform="rotate(-45,6,6)" />
-		<circle class="t__svg-ring" cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="0 5 27.7 5" stroke-dashoffset="0.01" transform="rotate(-90,12,12)"/>
-		<line class="t__svg-line" x1="12" y1="6" x2="12" y2="15" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="9 9" stroke-dashoffset="3"/>
-		<line class="t__svg-line" x1="12" y1="6" x2="12" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 6" stroke-dashoffset="6"/>
-	</svg>
-	<span class="t__sr">Power</span>
-</a>
-	<script>
-document.getElementById("powerButton").addEventListener("click", function() {
-    // Redirection vers la servlet Deconnect
-    window.location.href = "${pageContext.request.contextPath}/Deconnect";
-});
+<script>
+function redirectToJSP() {
+    // Redirection vers la page JSP
+    window.location.href = "${pageContext.request.contextPath}/Web_inf/vues/back/test.jsp";
+}
 </script>
+		
+	    
 	
 	
 	

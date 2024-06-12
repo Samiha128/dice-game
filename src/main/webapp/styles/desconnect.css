@@ -1,4 +1,4 @@
-* {
+ * {
 	border: 0;
 	box-sizing: border-box;
 	margin: 0;
@@ -30,13 +30,17 @@ body {
 	display: grid;
 	place-items: center;
 }
-
 .t {
-    position: fixed; /* positionnement fixe */
-    right: 20px; /* distance de 20px du bord droit de la fenêtre */
-    bottom: 40px; /* distance de 40px du bas de la fenêtre */
-    z-index: 2; /* assure que l'élément est au-dessus d'autres éléments */
+    position: relative; /* Positionnement fixe */
+    right: 60px; /* Distance de 60px du bord droit de la fenêtre */
+    bottom: 250px; /* Distance de 250px du bas de la fenêtre */
+    z-index: 2; /* Z-index pour être au-dessus d'autres éléments */
+    width: 1.5em; /* Largeur */
+    height: 1.5em; /* Hauteur */
+    
+	
 }
+
 .t__checkbox,
 .t__sr,
 .t__svg {
@@ -145,4 +149,3 @@ body {
 	stroke-dashoffset: -3;
 	transition-delay: 0s, 0.25s;
 }
-
