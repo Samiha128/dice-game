@@ -28,6 +28,17 @@ This is a web application for a game of dice. The backend is developed using Jav
 - **Apache Tomcat (v10.0)**
   
 ## Installation
-
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Samiha128/dice-game
+2.Download Apache Tomcat version 10.0 from the official Apache Tomcat website.
+(https://tomcat.apache.org/download-10.cgi).
 ## Usage
+
+    Start Apache Tomcat server.
+    Access the application through your web browser.
+    Register for an account or log in if you already have one.
+    Start playing the Dice Game by buying and selling Dice.
+    Enjoy the game!
+
 
