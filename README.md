@@ -1,4 +1,4 @@
- ![Dice Icon](https://cdn-icons-png.flaticon.com/128/246/246569.png) # Dice Game 
+ # Dice Game   ![Dice Icon](https://cdn-icons-png.flaticon.com/128/16164/16164365.png)
 
 
 
