@@ -1,6 +1,7 @@
 # Dice Game
 
-![Dice Icon](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/dice-d20.svg)
+![Dice Icon](https://www.flaticon.com/svg/vstatic/svg/2465/246569.svg?token=exp=1623592850~hmac=3a0d150fa5f6b3fa26a55f01e9fcbcf2)
+
 
 
 ## Table of Contents
