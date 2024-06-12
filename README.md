@@ -41,19 +41,31 @@ This is a web application for a game of dice. The backend is developed using Jav
 **5.Enjoy the game!**
 **Log in Interface :**
 ![sign in](https://github.com/Samiha128/dice-game/assets/120471620/87e0990d-4bf9-401b-ab45-4ba256a2f4e8)
+
 **Register Interface :**
+
 ![sign up](https://github.com/Samiha128/dice-game/assets/120471620/1a877bbd-e621-405a-bc8a-e3cdbfe01429)
+
 **Home Interface :**
+
 ![dice](https://github.com/Samiha128/dice-game/assets/120471620/fab5d1e6-3795-4ad7-8f1a-b0e2106e2e89)
+
 **User Interface: Game Play**
+
 ![regle de jeu](https://github.com/Samiha128/dice-game/assets/120471620/737e631e-a358-4244-8311-5d3d860c838d)
+
 **User Interfaces: Best Score**
 
 ![best score](https://github.com/Samiha128/dice-game/assets/120471620/7bf35a88-c7ae-43f3-b9b3-bdca397a984b)
+
 **User Interface: User Scores**
+
 ![score](https://github.com/Samiha128/dice-game/assets/120471620/d6830f89-fe6f-466c-ba25-f587b48f678e)
+
 **User Interface: Error Handling**
-![Uploading error.jpg…]()
+
+![error](https://github.com/Samiha128/dice-game/assets/120471620/a1f4e459-20b6-4d1b-8d73-0d59254d98c2)
+
 
 
 
